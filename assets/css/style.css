@@ -24,7 +24,15 @@ body{
     transform:perspective(1000px);
     box-shadow: 10px 20px 40px rgba(0,0,0,.25);
 }
-
+.imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.imgBox img{
+    
+}
 .card .details{
     position: absolute;
     top: 0;
@@ -39,5 +47,49 @@ body{
 
 
 .card .details .content{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .details .content h2{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+}
+.card .details .content h2 span{
+    color: var(--span);
+    font-size: .8em;
+}
+
+.card .details .content .social-icons{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+}
+
+.card .details .content .social-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px;
+    transition: .3s;
+}
+.card .details .content .social-icons a i{
+    transition: .3s;
+}
+.card .details .content .social-icons a:hover{
+    background: var(--span);
+}
+
+.card .details .content .social-icons a:hover i{
+    transform: scale(1.2);
 }
